@@ -442,7 +442,7 @@ Pada tiap iterasi program mencetak tabel biaya dan alokasi (`biaya [alokasi]`), 
 ### 9.1 Metodologi
 
 - **Dataset:** 69 testcase pada folder [`69/`](69), dengan ukuran 3x2 sampai 30x32, serta 2x94 pada kelompok G9.
-- **Pembanding:** nilai pada baris terakhir tiap file, yaitu biaya optimal. Khusus `G6_N04`, angka pada file (555) tidak sesuai matriks. Nilai optimal yang benar adalah **1580**, sesuai catatan pada repositori [Risop-RBS-CS](https://github.com/aelraffa/Risop-RBS-CS), dan nilai ini yang kami pakai.
+- **Pembanding:** nilai pada baris terakhir tiap file, yaitu biaya optimal. Khusus `G6_N04`, angka pada file (555) tidak sesuai matriks. Nilai optimal yang benar adalah **1580**, dan nilai ini yang kami pakai (semua varian program menghasilkan 1580).
 - **Metode yang dibandingkan:** CSM Berantai (metode usulan, `csmBaru`), CSM asli (`csmOri`), Fractional VAM (`fvam`), RBSM (`rbsm`), dan SAM (`sam`). Seluruhnya dijalankan pada 69 testcase yang sama.
 - **Ablasi:** `CSMPerantara.c` juga dikompilasi dengan `MAXHOP=1`, `MAXHOP=2`, dan `MAXHOP=3` untuk melihat pengaruh panjang rute (bagian 9.5).
 - **Metrik:**
@@ -712,7 +712,6 @@ Pada dataset yang sama, CSM Berantai unggul dari keempat metode pembanding (bagi
 - **Keandalan:** tidak ada hasil ERROR, sedangkan SAM gagal pada 2 soal.
 - **Per ukuran:** metode usulan optimal pada semua soal sampai ukuran 5x7. Pada soal besar (10x10 ke atas) kelima metode sulit mencapai optimal.
 
-Sebagai gambaran tambahan, repositori acuan melaporkan SERDA 57/69 ([SERDA-Method](https://github.com/IsabellaSienna01/SERDA-Method)) dan RBS-CS 61/69 ([Risop-RBS-CS](https://github.com/aelraffa/Risop-RBS-CS)). Angka ini **bukan** hasil eksekusi kami dan aturan implementasinya dapat berbeda, sehingga tidak sepenuhnya setara.
 
 ### 10.5 Waktu eksekusi
 
@@ -771,7 +770,3 @@ Pada praktiknya jumlah sel ER yang berisi unit jauh lebih kecil dari $mn$, dan r
 ## 14. Referensi
 
 1. Dokumen acuan dosen: *Perbedaan SSM, CSM, RBSM dan Modif SSM* (Google Docs).
-2. Erica T. W., dkk. *SERDA Method: Dynamic Mean-Opportunity Vogel's Approximation Method*. https://github.com/IsabellaSienna01/SERDA-Method
-3. Elraffa A. dan Muhammad R. H. *RBS-CS: Pengembangan RBSM melalui Transfer Berantai untuk Masalah Transportasi*. https://github.com/aelraffa/Risop-RBS-CS
-4. Kelompok 2 RISOP. *VAM Pasangan: Perbandingan Metode Solusi Awal Masalah Transportasi*. https://github.com/rezaafzaal/kelompok2_risop_VAM_pasangan
-5. Rihan Farih Bunyamin, Bilqis Amaliah, dan Ahmad Saikhu, pengembang Supply Selection Method dan turunannya (RBSM, CSM), sebagaimana dirujuk pada repositori nomor 3 dan 4.
